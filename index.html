@@ -1,1 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🏛️ Museo de Nuestro Amor | 9 Meses</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="loader">
+
+<div class="loader-content">
+
+<div class="loader-ring"></div>
+
+<h1>Museo de Nuestro Amor</h1>
+
+<p>Preparando una exposición creada únicamente para ti...</p>
+
+</div>
+
+</div>
+
+<div id="stars"></div>
+<div id="particles"></div>
+
+<section id="welcome">
+
+<div class="museum">
+
+<div class="light left"></div>
+<div class="light right"></div>
+
+<h2>EDICIÓN ESPECIAL</h2>
+
+<h1>Museo de Nuestro Amor</h1>
+
+<p class="subtitle">
+
+Una colección formada por recuerdos,
+promesas y sentimientos que solo
+existieron porque tú llegaste a mi vida.
+
+</p>
+
+<div class="door-area">
+
+<div class="door left-door"></div>
+
+<div class="door right-door"></div>
+
+<div class="gold-plate">
+
+<p>
+
+Esta exposición fue creada para una sola visitante.
+
+</p>
+
+<h3>TÚ ❤️</h3>
+
+</div>
+
+</div>
+
+<button id="enterMuseum">
+
+Entrar al museo
+
+</button>
+
+</div>
+
+</section>
+
+<section id="hall" class="hidden">
+
+<header>
+
+<h1>
+
+🏛️ Museo de Nuestro Amor
+
+</h1>
+
+<p>
+
+Recorre cada una de las obras.
+
+Todas cuentan una parte de nuestra historia.
+
+</p>
+
+</header>
+
+<div class="gallery">
+
+<div class="frame" data-room="1">
+
+<div class="frame-inner">
+
+<span>I</span>
+
+<h3>Donde Todo Comenzó</h3>
+
+</div>
+
+</div>
+
+<div class="frame" data-room="2">
+
+<div class="frame-inner">
+
+<span>II</span>
+
+<h3>Tu Sonrisa</h3>
+
+</div>
+
+</div>
+
+<div class="frame" data-room="3">
+
+<div class="frame-inner">
+
+<span>III</span>
+
+<h3>Los Pequeños Momentos</h3>
+
+</div>
+
+</div>
+
+<div class="frame" data-room="4">
+
+<div class="frame-inner">
+
+<span>IV</span>
+
+<h3>Tu Esencia</h3>
+
+</div>
+
+</div>
+
+<div class="frame" data-room="5">
+
+<div class="frame-inner">
+
+<span>V</span>
+
+<h3>Nuestro Refugio</h3>
+
+</div>
+
+</div>
+
+<div class="frame" data-room="6">
+
+    <div class="frame-inner">
+
+        <span>VI</span>
+
+        <h3>Incluso En La Distancia</h3>
+
+    </div>
+
+</div>
+
+<div class="frame" data-room="7">
+
+    <div class="frame-inner">
+
+        <span>VII</span>
+
+        <h3>Mis Sueños Contigo</h3>
+
+    </div>
+
+</div>
+
+<div class="frame" data-room="8">
+
+    <div class="frame-inner">
+
+        <span>VIII</span>
+
+        <h3>Gracias</h3>
+
+    </div>
+
+</div>
+
+<div class="frame final-frame" data-room="9">
+
+    <div class="frame-inner">
+
+        <span>IX</span>
+
+        <h3>La Obra Maestra</h3>
+
+        <small>No abrir hasta recorrer todo el museo</small>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MODAL -->
+
+<div id="artModal" class="modal hidden">
+
+    <div class="modal-card">
+
+        <button id="closeModal">&times;</button>
+
+        <h2 id="artTitle"></h2>
+
+        <div id="artBody"></div>
+
+        <button id="nextArtwork">
+
+            Continuar recorriendo
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- FINAL -->
+
+<section id="finalScene" class="hidden">
+
+<div class="final-stars"></div>
+
+<div class="final-hearts"></div>
+
+<div class="final-content">
+
+<h3>La Última Sala</h3>
+
+<h1>La Obra Más Hermosa</h1>
+
+<p>
+
+Después de recorrer cada rincón de este museo,
+comprendí que todas estas obras hablaban de una
+misma persona.
+
+Tú.
+
+La mujer que convirtió los días comunes en recuerdos
+inolvidables.
+
+La que logró que mi corazón encontrara un hogar.
+
+La que hizo que nueve meses parecieran apenas
+el comienzo de una historia inmensa.
+
+</p>
+
+<h2>
+
+❤️ Feliz Aniversario ❤️
+
+</h2>
+
+<p class="love">
+
+Gracias por estos nueve meses tan maravillosos.
+
+Espero que algún día este museo tenga cientos de
+salas más... porque significará que seguimos
+escribiendo nuestra historia.
+
+Te amo infinitamente.
+
+</p>
+
+<button id="restartMuseum">
+
+Volver a recorrer el museo
+
+</button>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+  </html>
