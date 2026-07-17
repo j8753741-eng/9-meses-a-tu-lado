@@ -369,22 +369,43 @@ createHearts();
 ========================*/
 
 const originalOpenArtwork = openArtwork;
+const finalFrame = document.querySelector('[data-room="9"]');
 
-openArtwork = function(id){
+if(finalFrame){
 
-originalOpenArtwork(id);
+finalFrame.addEventListener("click",()=>{
 
-if(id===9){
+if(visited.length<8){
 
-setTimeout(()=>{
-
-showFinalScene();
-
-},9000);
+alert("Primero visita todas las obras ❤️");
+return;
 
 }
 
-};
+modal.classList.add("hidden");
+hall.classList.add("hidden");
+finalScene.classList.remove("hidden");
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+}
+
+/*========================
+REINICIAR
+========================*/
+
+restartBtn.addEventListener("click",()=>{
+
+location.reload();
+
+});
+
+console.log("Museo iniciado correctamente");
 
 /*========================
 CORAZONES
@@ -426,16 +447,6 @@ heart.remove();
 },250);
 
 }
-
-/*========================
-REINICIAR
-========================*/
-
-restartBtn.addEventListener("click",()=>{
-
-location.reload();
-
-});
 
 /*========================
 ANIMACIÓN JS
