@@ -1,309 +1,468 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ 9 Meses Juntos ✨</title>
 
-<title>🏛️ Museo de Nuestro Amor | 9 Meses</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<link rel="stylesheet" href="style.css">
+body{
+
+font-family:Poppins,sans-serif;
+background:#090d18;
+overflow-x:hidden;
+color:white;
+
+}
+
+body::before{
+
+content:"";
+position:fixed;
+inset:0;
+
+background:
+
+radial-gradient(circle at top,#243b73 0%,#0a1020 45%,#05070d 100%);
+
+z-index:-2;
+
+}
+
+.stars{
+
+position:fixed;
+inset:0;
+
+background-image:
+
+radial-gradient(white 1px,transparent 1px),
+radial-gradient(gold 1px,transparent 1px);
+
+background-size:120px 120px,180px 180px;
+
+opacity:.45;
+
+animation:stars 90s linear infinite;
+
+z-index:-1;
+
+}
+
+@keyframes stars{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-800px);
+}
+
+}
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+text-align:center;
+
+}
+
+h1{
+
+font-family:Cinzel,serif;
+
+font-size:3rem;
+
+margin-bottom:15px;
+
+}
+
+.subtitle{
+
+font-size:1.2rem;
+
+opacity:.8;
+
+max-width:700px;
+
+line-height:2rem;
+
+margin-bottom:40px;
+
+}
+
+.counter{
+
+padding:18px 35px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.15);
+
+margin-bottom:40px;
+
+font-size:1.2rem;
+
+}
+
+button{
+
+padding:16px 35px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(135deg,#ffd54f,#ffec99);
+
+color:#111;
+
+font-weight:bold;
+
+cursor:pointer;
+
+font-size:1rem;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+#letter{
+
+display:none;
+
+margin-top:45px;
+
+width:min(850px,95%);
+
+padding:35px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.07);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.15);
+
+line-height:2rem;
+
+font-size:1.15rem;
+
+text-align:justify;
+
+animation:fade .8s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.photos{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:20px;
+
+margin-top:40px;
+
+}
+
+.photo{
+
+height:200px;
+
+border-radius:18px;
+
+border:2px dashed rgba(255,255,255,.3);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:.9rem;
+
+opacity:.7;
+
+}
+
+#final{
+
+display:none;
+
+margin-top:40px;
+
+text-align:center;
+
+animation:fade 1s;
+
+}
+
+#final h2{
+
+font-family:Cinzel,serif;
+
+font-size:2.3rem;
+
+margin-bottom:20px;
+
+}
+
+.hearts{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.heart{
+
+position:absolute;
+
+bottom:-50px;
+
+font-size:25px;
+
+animation:float 8s linear forwards;
+
+}
+
+@keyframes float{
+
+to{
+
+transform:translateY(-120vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div id="loader">
+<div class="stars"></div>
 
-<div class="loader-content">
+<div class="hearts" id="hearts"></div>
 
-<div class="loader-ring"></div>
+<section class="hero">
 
-<h1>Museo de Nuestro Amor</h1>
-
-<p>Preparando una exposición creada únicamente para ti...</p>
-
-</div>
-
-</div>
-
-<div id="stars"></div>
-<div id="particles"></div>
-
-<section id="welcome">
-
-<div class="museum">
-
-<div class="light left"></div>
-<div class="light right"></div>
-
-<h2>EDICIÓN ESPECIAL</h2>
-
-<h1>Museo de Nuestro Amor</h1>
+<h1>✨ Nueve Meses Juntos ✨</h1>
 
 <p class="subtitle">
 
-Una colección formada por recuerdos,
-promesas y sentimientos que solo
-existieron porque tú llegaste a mi vida.
+Hoy no quería regalarte solo unas palabras.
+
+Quería regalarte un pequeño lugar donde siempre podamos volver.
 
 </p>
 
-<div class="door-area">
+<div class="counter">
 
-<div class="door left-door"></div>
+❤️ Ya llevamos 9 meses escribiendo nuestra historia.
 
-<div class="door right-door"></div>
+</div>
 
-<div class="gold-plate">
+<button onclick="openLetter()">
+
+Abrir mi sorpresa
+
+</button>
+
+<div id="letter">
+
+<h2 style="text-align:center;font-family:Cinzel,serif;margin-bottom:25px;">
+Para ti, mi niña hermosa ❤️
+</h2>
 
 <p>
 
-Esta exposición fue creada para una sola visitante.
+Si estás leyendo esto, probablemente ya llegó ese momento que llevaba días esperando.
+Quería que esta noche no fuera como cualquier otra, sino que tuvieras un pequeño rincón donde pudieras sentir cuánto significan estos nueve meses para mí.
 
 </p>
 
-<h3>TÚ ❤️</h3>
+<p>
+
+Gracias por cada sonrisa, por cada abrazo, por cada conversación, por cada momento en el que decidiste caminar a mi lado. Incluso los días difíciles han valido la pena porque siempre han sido contigo.
+
+</p>
+
+<p>
+
+No sé qué nos regalará el futuro, pero sí sé qué deseo con todo mi corazón: seguir escribiendo recuerdos contigo, celebrar muchos meses más y seguir enamorándome de ti todos los días.
+
+</p>
+
+<p>
+
+Eres una de las personas más importantes de mi vida, y espero que cuando vuelvas a abrir esta página dentro de mucho tiempo, recuerdes que hubo alguien que hizo esto solo para verte sonreír.
+
+</p>
+
+<div class="photos">
+
+<div class="photo">📷 Nuestra foto favorita</div>
+
+<div class="photo">📷 Nuestro mejor recuerdo</div>
+
+<div class="photo">📷 Una aventura juntos</div>
+
+<div class="photo">📷 El próximo recuerdo ❤️</div>
 
 </div>
 
-</div>
+<div style="text-align:center;margin-top:40px;">
 
-<button id="enterMuseum">
+<button onclick="showFinal()">
 
-Entrar al museo
+Tócame ❤️
 
 </button>
 
 </div>
 
-</section>
-
-<section id="hall" class="hidden">
-
-<header>
-
-<h1>
-
-🏛️ Museo de Nuestro Amor
-
-</h1>
-
-<p>
-
-Recorre cada una de las obras.
-
-Todas cuentan una parte de nuestra historia.
-
-</p>
-
-</header>
-
-<div class="gallery">
-
-<div class="frame" data-room="1">
-
-<div class="frame-inner">
-
-<span>I</span>
-
-<h3>Donde Todo Comenzó</h3>
-
 </div>
 
-</div>
-
-<div class="frame" data-room="2">
-
-<div class="frame-inner">
-
-<span>II</span>
-
-<h3>Tu Sonrisa</h3>
-
-</div>
-
-</div>
-
-<div class="frame" data-room="3">
-
-<div class="frame-inner">
-
-<span>III</span>
-
-<h3>Los Pequeños Momentos</h3>
-
-</div>
-
-</div>
-
-<div class="frame" data-room="4">
-
-<div class="frame-inner">
-
-<span>IV</span>
-
-<h3>Tu Esencia</h3>
-
-</div>
-
-</div>
-
-<div class="frame" data-room="5">
-
-<div class="frame-inner">
-
-<span>V</span>
-
-<h3>Nuestro Refugio</h3>
-
-</div>
-
-</div>
-
-<div class="frame" data-room="6">
-
-    <div class="frame-inner">
-
-        <span>VI</span>
-
-        <h3>Incluso En La Distancia</h3>
-
-    </div>
-
-</div>
-
-<div class="frame" data-room="7">
-
-    <div class="frame-inner">
-
-        <span>VII</span>
-
-        <h3>Mis Sueños Contigo</h3>
-
-    </div>
-
-</div>
-
-<div class="frame" data-room="8">
-
-    <div class="frame-inner">
-
-        <span>VIII</span>
-
-        <h3>Gracias</h3>
-
-    </div>
-
-</div>
-
-<div class="frame final-frame" data-room="9">
-
-    <div class="frame-inner">
-
-        <span>IX</span>
-
-        <h3>La Obra Maestra</h3>
-
-        <small>No abrir hasta recorrer todo el museo</small>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- MODAL -->
-
-<div id="artModal" class="modal hidden">
-
-    <div class="modal-card">
-
-        <button id="closeModal">&times;</button>
-
-        <h2 id="artTitle"></h2>
-
-        <div id="artBody"></div>
-
-        <button id="nextArtwork">
-
-            Continuar recorriendo
-
-        </button>
-
-    </div>
-
-</div>
-
-<!-- FINAL -->
-
-<section id="finalScene" class="hidden">
-
-<div class="final-stars"></div>
-
-<div class="final-hearts"></div>
-
-<div class="final-content">
-
-<h3>La Última Sala</h3>
-
-<h1>La Obra Más Hermosa</h1>
-
-<p>
-
-Después de recorrer cada rincón de este museo,
-comprendí que todas estas obras hablaban de una
-misma persona.
-
-Tú.
-
-La mujer que convirtió los días comunes en recuerdos
-inolvidables.
-
-La que logró que mi corazón encontrara un hogar.
-
-La que hizo que nueve meses parecieran apenas
-el comienzo de una historia inmensa.
-
-</p>
+<div id="final">
 
 <h2>
 
-❤️ Feliz Aniversario ❤️
+✨ Feliz 9 Meses Mi Amor ✨
 
 </h2>
 
-<p class="love">
+<p style="font-size:1.2rem;line-height:2rem;max-width:700px;margin:auto;">
 
-Gracias por estos nueve meses tan maravillosos.
+Gracias por hacer de estos nueve meses una etapa tan bonita de mi vida.
 
-Espero que algún día este museo tenga cientos de
-salas más... porque significará que seguimos
-escribiendo nuestra historia.
+Ojalá este sea apenas el comienzo de una historia muchísimo más grande.
 
-Te amo infinitamente.
+Te amo infinitamente. ❤️
 
 </p>
-
-<button id="restartMuseum">
-
-Volver a recorrer el museo
-
-</button>
 
 </div>
 
 </section>
 
-<script src="script.js"></script>
+<script>
+
+function openLetter(){
+
+document.getElementById("letter").style.display="block";
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+}
+
+function showFinal(){
+
+document.getElementById("final").style.display="block";
+
+for(let i=0;i<120;i++){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.animationDuration=(4+Math.random()*4)+"s";
+
+heart.style.fontSize=(18+Math.random()*28)+"px";
+
+document.getElementById("hearts").appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},8000);
+
+}
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
 
 </body>
 
-  </html>
+</html>
